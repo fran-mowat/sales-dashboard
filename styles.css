@@ -1,0 +1,97 @@
+:root{
+    --dark: #363740;
+    --light: #c8c8c8;
+    --off-white: #f7f8fc;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+#sidebar{
+    background-color: var(--dark);
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(10, 1fr);
+    color: var(--light);
+}
+
+#sidebar div{
+    padding: 10px 5px; 
+}
+
+#sidebar #logo{
+    height: 30px;
+}
+
+#sidebar #settings{
+    grid-row: 8 / 9;
+}
+
+#sidebar #support{
+    grid-row: 9 / 10;
+}
+
+#sidebar #privacy{
+    grid-row: 10 / 11;
+}
+
+#main-body{
+    display: grid;
+    grid-template-rows: 100px auto;
+    background-color: red;
+}
+
+#main-body #header{
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 4fr 1fr 200px;
+    background-color: var(--off-white);
+}
+
+#main-body #header #search div{
+    vertical-align: middle;
+}
+
+#main-body #header #search div, #main-body #header #search input{
+    display: inline;
+}
+
+#main-body #header #search-icon, #main-body #header #notification-icon{
+    height: 30px;
+}
+
+#main-body #header #profile-info p{
+    display: inline;
+}
+
+#main-body #header #profile-info img{
+    border-radius: 50%;
+    width: 50px;
+    display: inline;
+    vertical-align: middle;
+}
+
+#main-body #main #greeting p, #main-body #main #greeting button{
+    display: inline;
+}
+
+#main-body #main #charts{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 200px);
+    gap: 20px;
+}
+
+#main-body #main #charts div{
+    background-color: var(--light);
+    border-radius: 5px;
+}
+
