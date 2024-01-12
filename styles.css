@@ -74,6 +74,20 @@ body{
 
 #sidebar #logo{
     height: 30px;
+    padding: 16px;
+}
+
+#sidebar #logo div, #sidebar #logo p{
+    display: inline;
+    vertical-align: middle;
+}
+
+#sidebar #logo div img{
+    height: 30px;
+}
+
+#sidebar #logo p{
+    font-size: 30px;
 }
 
 #sidebar #settings{
