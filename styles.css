@@ -95,10 +95,16 @@ body{
 }
 
 #main-body #header{
-    display: grid;
-    grid-template-rows: auto;
-    grid-template-columns: 4fr 1fr 200px;
+    display: flex;
+    flex-direction: row;
     background-color: var(--off-white);
+    height: 60px;
+    align-items: center;
+}
+
+#main-body #header #search{
+    flex: 0;
+    flex-basis: 300px;
 }
 
 #main-body #header #search div{
@@ -109,12 +115,38 @@ body{
     display: inline;
 }
 
-#main-body #header #search-icon, #main-body #header #notification-icon{
+#main-body #header #search-icon{
     height: 30px;
+    margin-left: 5px;
+}
+
+#main-body #header #search input{
+    width: 220px;
+    height: 22px;
+    border-radius: 5px;
+    border: 1px solid var(--dark);
+}
+
+#main-body #header #header-section{
+    flex: 1;
+}
+
+#main-body #header #profile-info{
+    flex: 0;
+    flex-basis: 250px;
+}
+
+#main-body #header #profile-info #notification{
+    display: inline;
+}
+
+#main-body #header #profile-info #notification #notification-icon{
+    height: 25px;
 }
 
 #main-body #header #profile-info p{
     display: inline;
+    vertical-align: middle;
 }
 
 #main-body #header #profile-info img{
@@ -122,6 +154,7 @@ body{
     width: 50px;
     display: inline;
     vertical-align: middle;
+    padding: 0px 5px;
 }
 
 #main-body #main #greeting p, #main-body #main #greeting button{
