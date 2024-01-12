@@ -21,10 +21,55 @@ body{
     grid-template-columns: 300px;
     grid-template-rows: repeat(10, 1fr);
     color: var(--light);
+    position: fixed;
 }
 
-#sidebar div{
+#sidebar .sidebar-div{
     padding: 10px 5px; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#sidebar .sidebar-div:hover{
+    background-color: rgba(60, 61, 70);
+}
+
+#sidebar .sidebar-div .block {
+    flex: 0;
+    flex-basis: 5px;
+    background-color: var(--dark);
+    width: 5px;
+    height: 50px;
+    vertical-align: middle;
+    border-radius: 3px;
+} 
+
+#sidebar .sidebar-div:hover .block{
+    background-color: var(--off-white);
+}
+
+#sidebar .sidebar-div .sidebar-icon{
+    flex: 0;
+    flex-basis: 40px;
+    margin: 0px 20px;
+}
+
+#sidebar .sidebar-div .sidebar-icon img{
+    height: 30px;
+}
+
+#sidebar .sidebar-div:hover .sidebar-icon img{
+    filter: brightness(100);
+}
+
+#sidebar .sidebar-div .sidebar-text{
+    flex: 1;
+}
+
+#sidebar .sidebar-div:hover .sidebar-text{
+    color: var(--off-white);
 }
 
 #sidebar #logo{
@@ -86,7 +131,7 @@ body{
 #main-body #main #charts{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(2, 200px);
+    grid-template-rows: repeat(5, 200px);
     gap: 20px;
 }
 
