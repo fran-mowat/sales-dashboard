@@ -231,13 +231,53 @@ body{
 #main-body #main #charts{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, 200px);
+    grid-template-rows: repeat(5, max-content);
     gap: 20px;
     padding: 20px 10px;
 }
 
-#main-body #main #charts div{
+#main-body #main #charts .chart-container{
     background-color: white;
     border-radius: 5px;
 }
 
+#main-body #main #charts .chart-container .chart-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#main-body #main #charts .chart-container .chart-header p{
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 12px;
+    flex: 0;
+    flex-basis: max-content;
+    vertical-align: middle;
+    margin: 12px;
+}
+
+#main-body #main #charts .chart-container .chart-header div{
+    flex: 1;
+}
+
+#main-body #main #charts .chart-container .chart-header .header-icons{
+    flex: 0;
+    flex-basis: max-content;
+    vertical-align: middle;
+    padding: 0px 8px 0px 0px;
+    height: 20px;
+    width: 20px;
+}
+
+#main-body #main #charts .chart-container .chart-header .header-icons img{
+    height: 20px;
+}
+
+#main-body #main #charts .chart-container hr{
+    margin: 0;
+}
+
+#main-body #main #charts .chart-container img{
+    height: 200px;
+}
