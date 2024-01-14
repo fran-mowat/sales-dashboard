@@ -1,5 +1,4 @@
 let openMenu = (e) => {
-    console.log("open")
     let sidebar = document.getElementById("sidebar");
     sidebar.style.display = "grid";
 
@@ -10,7 +9,6 @@ let openMenu = (e) => {
 let closeMenu = (e) => {
     e.stopPropagation();
 
-    console.log("close")
     let sidebar = document.getElementById("sidebar");
     sidebar.style.display = "none";
 
