@@ -325,3 +325,7 @@ body{
 #main-body #main #charts .chart-container .chart-image img{
     height: 270px;
 }
+
+.icon:hover{
+    filter: drop-shadow(1px 1px 5px grey);
+}
