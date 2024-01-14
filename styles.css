@@ -21,6 +21,7 @@ body{
     grid-template-rows: repeat(10, 1fr);
     color: var(--grey);
     position: fixed;
+    z-index: 2;
 }
 
 #sidebar .sidebar-div{
