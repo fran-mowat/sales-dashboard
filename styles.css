@@ -17,7 +17,7 @@ body{
     display: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
     body{
         grid-template-columns: 300px 1fr;
     }
@@ -127,8 +127,22 @@ body{
 }
 
 #main-body #header #search{
-    flex: 0;
-    flex-basis: 300px;
+    flex: 0 1 340px;
+}
+
+#main-body #header #search #menu{
+    display: inline;
+}
+
+#main-body #header #search #menu img{
+    height: 30px;
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 992px) {
+    #main-body #header #search #menu{
+        display: none;
+    }
 }
 
 #main-body #header #search div{
@@ -144,21 +158,34 @@ body{
     margin-left: 5px;
 }
 
+@media screen and (min-width: 992px) {
+    #main-body #header #search-icon{
+        margin-left: 10px;
+    }
+}
+
 #main-body #header #search input{
-    width: 220px;
-    height: 22px;
-    border-radius: 5px;
-    border: 1px solid var(--dark);
-    background-color: var(--light);
+    display: none;
+}
+
+@media screen and (min-width: 992px) {
+    #main-body #header #search input{
+        display: inline;
+        width: 220px;
+        height: 22px;
+        border-radius: 5px;
+        border: 1px solid var(--dark);
+        background-color: var(--light);
+        margin-left: 5px;
+    }
 }
 
 #main-body #header #header-section{
-    flex: 1;
+    flex: 1 1 0;
 }
 
 #main-body #header #profile-info{
-    flex: 0;
-    flex-basis: 250px;
+    flex: 0 0 250px;
 }
 
 #main-body #header #profile-info #notification{
@@ -204,6 +231,7 @@ body{
     font-weight: bold;
     font-size: 22px;
     padding: 0px 20px;
+    margin: 10px 0;
     flex: 0;
     flex-basis: max-content;
 }
