@@ -15,101 +15,101 @@ body{
 
 #sidebar{
     display: none;
+    background-color: var(--dark);
+    height: 100vh;
+    grid-template-columns: 300px;
+    grid-template-rows: repeat(10, 1fr);
+    color: var(--grey);
+    position: fixed;
+}
+
+#sidebar .sidebar-div{
+    padding: 10px 5px; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+#sidebar .sidebar-div:hover{
+    background-color: rgba(60, 61, 70);
+}
+
+#sidebar .sidebar-div .block {
+    flex: 0;
+    flex-basis: 5px;
+    background-color: var(--dark);
+    width: 5px;
+    height: 50px;
+    vertical-align: middle;
+    border-radius: 3px;
+} 
+
+#sidebar .sidebar-div:hover .block{
+    background-color: var(--light);
+}
+
+#sidebar .sidebar-div .sidebar-icon{
+    flex: 0;
+    flex-basis: 40px;
+    margin: 0px 20px;
+}
+
+#sidebar .sidebar-div .sidebar-icon img{
+    height: 30px;
+}
+
+#sidebar .sidebar-div:hover .sidebar-icon img{
+    filter: brightness(100);
+}
+
+#sidebar .sidebar-div .sidebar-text{
+    flex: 1;
+}
+
+#sidebar .sidebar-div:hover .sidebar-text{
+    color: var(--light);
+}
+
+#sidebar #logo{
+    height: 30px;
+    padding: 16px;
+}
+
+#sidebar #logo div, #sidebar #logo p{
+    display: inline;
+    vertical-align: middle;
+}
+
+#sidebar #logo div img{
+    height: 30px;
+}
+
+#sidebar #logo p{
+    font-size: 30px;
+}
+
+#sidebar #settings{
+    grid-row: 8 / 9;
+}
+
+#sidebar #support{
+    grid-row: 9 / 10;
+}
+
+#sidebar #privacy{
+    grid-row: 10 / 11;
 }
 
 @media screen and (min-width: 992px) {
     body{
         grid-template-columns: 300px 1fr;
     }
-    
+
     #sidebar{
-        display: block;
-        background-color: var(--dark);
-        height: 100vh;
         display: grid;
-        grid-template-columns: 300px;
-        grid-template-rows: repeat(10, 1fr);
-        color: var(--grey);
-        position: fixed;
     }
     
-    #sidebar .sidebar-div{
-        padding: 10px 5px; 
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-    }
-    
-    #sidebar .sidebar-div:hover{
-        background-color: rgba(60, 61, 70);
-    }
-    
-    #sidebar .sidebar-div .block {
-        flex: 0;
-        flex-basis: 5px;
-        background-color: var(--dark);
-        width: 5px;
-        height: 50px;
-        vertical-align: middle;
-        border-radius: 3px;
-    } 
-    
-    #sidebar .sidebar-div:hover .block{
-        background-color: var(--light);
-    }
-    
-    #sidebar .sidebar-div .sidebar-icon{
-        flex: 0;
-        flex-basis: 40px;
-        margin: 0px 20px;
-    }
-    
-    #sidebar .sidebar-div .sidebar-icon img{
-        height: 30px;
-    }
-    
-    #sidebar .sidebar-div:hover .sidebar-icon img{
-        filter: brightness(100);
-    }
-    
-    #sidebar .sidebar-div .sidebar-text{
-        flex: 1;
-    }
-    
-    #sidebar .sidebar-div:hover .sidebar-text{
-        color: var(--light);
-    }
-    
-    #sidebar #logo{
-        height: 30px;
-        padding: 16px;
-    }
-    
-    #sidebar #logo div, #sidebar #logo p{
-        display: inline;
-        vertical-align: middle;
-    }
-    
-    #sidebar #logo div img{
-        height: 30px;
-    }
-    
-    #sidebar #logo p{
-        font-size: 30px;
-    }
-    
-    #sidebar #settings{
-        grid-row: 8 / 9;
-    }
-    
-    #sidebar #support{
-        grid-row: 9 / 10;
-    }
-    
-    #sidebar #privacy{
-        grid-row: 10 / 11;
-    }
 }
 
 #main-body{
